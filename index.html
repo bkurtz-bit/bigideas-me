@@ -24,15 +24,19 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body id="top">
 
 <header class="hudbar">
   <div class="wrap hudbar__in">
-    <div class="mark">
+    <a class="mark" href="#top">
       <span class="mark__glyph" aria-hidden="true"></span>
       <span class="mark__txt">Big Ideas Group</span>
-    </div>
-    <span class="chip"><span class="chip__dot"></span>Private holding company</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#position">Position</a>
+      <a href="#holdings">Holdings</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
 </header>
 
@@ -54,13 +58,13 @@
 
       <div class="hero__acts">
         <a class="btn btn--go" href="#contact">Contact</a>
-        <a class="btn btn--ghost" href="#approach">How the group works</a>
+        <a class="btn btn--ghost" href="#holdings">What we hold</a>
       </div>
     </div>
   </section>
 
   <!-- ============================ POSITION ============================ -->
-  <section class="sec wrap">
+  <section class="sec wrap" id="position">
     <div class="sec__head">
       <span class="hud hud--accent">Position</span>
       <h2>Where we stand</h2>
@@ -102,40 +106,9 @@
     </div>
   </section>
 
-  <!-- ============================ APPROACH ============================ -->
-  <section class="sec wrap" id="approach">
-    <div class="sec__head">
-      <span class="hud hud--accent">Approach</span>
-      <h2>How the group works</h2>
-      <span class="sec__rule" aria-hidden="true"></span>
-    </div>
-
-    <div class="tiles">
-      <article class="tile">
-        <span class="tile__n">BUILD</span>
-        <h3>Started inside the group</h3>
-        <p>New companies run on the group’s own capital and its own operators.
-          Nothing is spun up to be sold.</p>
-      </article>
-
-      <article class="tile">
-        <span class="tile__n">HOLD</span>
-        <h3>Kept past the exit window</h3>
-        <p>No fund, no vintage year, no outside timetable. That changes what a
-          business is allowed to optimise for.</p>
-      </article>
-
-      <article class="tile">
-        <span class="tile__n">BACK</span>
-        <h3>Only for people we know</h3>
-        <p>Occasionally we take a position in something run by someone we have
-          already worked with. Rarely otherwise.</p>
-      </article>
-    </div>
-  </section>
 
   <!-- ============================ HOLDINGS ============================ -->
-  <section class="sec wrap">
+  <section class="sec wrap" id="holdings">
     <div class="sec__head">
       <span class="hud hud--accent">Holdings</span>
       <h2>Not disclosed</h2>
@@ -167,22 +140,6 @@
     </p>
   </section>
 
-  <!-- ============================ INTERESTS ============================ -->
-  <section class="sec wrap">
-    <div class="sec__head">
-      <span class="hud hud--accent">Interests</span>
-      <h2>Where we operate</h2>
-      <span class="sec__rule" aria-hidden="true"></span>
-    </div>
-
-    <div class="sectors">
-      <span class="sector sector--primary">Financial technology</span>
-      <span class="sector">Payments</span>
-      <span class="sector">Digital assets</span>
-      <span class="sector">Advertising &amp; media</span>
-      <span class="sector">Consumer internet</span>
-    </div>
-  </section>
 
   <!-- ============================ CONTACT ============================ -->
   <section class="sec wrap" id="contact">
@@ -215,7 +172,7 @@
 </main>
 
 <footer class="wrap foot">
-  <span class="hud">&copy; <span id="y">2026</span> Big Ideas Group Ltd.</span>
+  <span class="hud">&copy; 2014–<span id="y">2026</span> Big Ideas Group Ltd.</span>
   <span class="hud">All rights reserved</span>
 </footer>
 
