@@ -33,7 +33,6 @@
       <span class="mark__txt">Big Ideas Group</span>
     </a>
     <nav class="nav" aria-label="Primary">
-      <a href="#group">The group</a>
       <a href="#holdings">Holdings</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -59,54 +58,10 @@
 
       <div class="hero__acts">
         <a class="btn btn--go" href="#contact">Contact</a>
-        <a class="btn btn--ghost" href="#holdings">What we hold</a>
+        <a class="btn btn--ghost" href="#holdings">Holdings</a>
       </div>
     </div>
   </section>
-
-  <!-- ============================ THE GROUP ============================ -->
-  <section class="sec wrap" id="group">
-    <div class="sec__head">
-      <span class="hud hud--accent">The group</span>
-      <h2>Where we stand</h2>
-      <span class="sec__rule" aria-hidden="true"></span>
-    </div>
-
-    <div class="attrs">
-      <div class="attr">
-        <div class="attr__top">
-          <span class="hud">Time horizon</span>
-          <span class="attr__val attr__val--on">Permanent</span>
-        </div>
-        <div class="meter"><i style="--fill:1"></i></div>
-      </div>
-
-      <div class="attr">
-        <div class="attr__top">
-          <span class="hud">Outside capital</span>
-          <span class="attr__val attr__val--off">None</span>
-        </div>
-        <div class="meter meter--off"><i style="--fill:0.04"></i></div>
-      </div>
-
-      <div class="attr">
-        <div class="attr__top">
-          <span class="hud">Operator-led</span>
-          <span class="attr__val attr__val--on">Fully</span>
-        </div>
-        <div class="meter"><i style="--fill:1"></i></div>
-      </div>
-
-      <div class="attr">
-        <div class="attr__top">
-          <span class="hud">New acquisitions</span>
-          <span class="attr__val attr__val--off">Closed</span>
-        </div>
-        <div class="meter meter--off"><i style="--fill:0.02"></i></div>
-      </div>
-    </div>
-  </section>
-
 
   <!-- ============================ HOLDINGS ============================ -->
   <section class="sec wrap" id="holdings">
@@ -116,29 +71,8 @@
       <span class="sec__rule" aria-hidden="true"></span>
     </div>
 
-    <div class="slots">
-      <div class="slot">
-        <div class="slot__bars" aria-hidden="true"><i style="width:78%"></i><i style="width:50%"></i></div>
-        <span class="slot__lock">Withheld</span>
-      </div>
-      <div class="slot">
-        <div class="slot__bars" aria-hidden="true"><i style="width:62%"></i><i style="width:72%"></i></div>
-        <span class="slot__lock">Withheld</span>
-      </div>
-      <div class="slot">
-        <div class="slot__bars" aria-hidden="true"><i style="width:86%"></i><i style="width:38%"></i></div>
-        <span class="slot__lock">Withheld</span>
-      </div>
-      <div class="slot">
-        <div class="slot__bars" aria-hidden="true"><i style="width:70%"></i><i style="width:58%"></i></div>
-        <span class="slot__lock">Withheld</span>
-      </div>
-    </div>
-
-    <p class="term__note" style="margin-top:24px">
-      We do not publish what the group owns. If you are already in a conversation
-      with one of our companies, you know which one.
-    </p>
+    <p class="say">We do not publish what the group owns. If you are already in a
+      conversation with one of our companies, you know which one.</p>
   </section>
 
 
@@ -177,6 +111,6 @@
   <span class="hud">All rights reserved</span>
 </footer>
 
-<script src="site.js" defer></script>
+<script>document.getElementById("y").textContent=new Date().getFullYear()</script>
 </body>
 </html>
