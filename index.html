@@ -4,122 +4,224 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Big Ideas Group</title>
-<meta name="description" content="Big Ideas Group Ltd. is a private holding company with interests in financial technology.">
+<meta name="description" content="Big Ideas Group Ltd. is a private holding company in financial technology. We build, own and back companies. No fund, no exit clock, no public roster.">
 <link rel="canonical" href="https://bigideas.me/">
-<meta name="theme-color" content="#F2EEE6">
+<meta name="theme-color" content="#0A0618">
+<meta name="color-scheme" content="dark">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Big Ideas Group">
 <meta property="og:title" content="Big Ideas Group">
-<meta property="og:description" content="A private holding company with interests in financial technology.">
+<meta property="og:description" content="A private holding company in financial technology.">
 <meta property="og:url" content="https://bigideas.me/">
 <meta name="twitter:card" content="summary">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F2EEE6'/%3E%3Crect x='6' y='6' width='20' height='20' fill='%23FF4A21'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0618'/%3E%3Cpath d='M16 4l10 6v12l-10 6-10-6V10z' fill='%238B5CFF'/%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Chakra+Petch:wght@500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<header class="masthead shell">
-  <span class="wordmark">Big&nbsp;Ideas&nbsp;Group</span>
-  <span class="mono">Est. London</span>
+<header class="hudbar">
+  <div class="wrap hudbar__in">
+    <div class="mark">
+      <span class="mark__glyph" aria-hidden="true"></span>
+      <span class="mark__txt">BIG&nbsp;IDEAS</span>
+    </div>
+    <span class="chip chip--live"><span class="chip__dot"></span>Private holding co.</span>
+  </div>
 </header>
 
 <main>
 
-  <!-- ============================ STATEMENT ============================ -->
-  <section class="hero shell">
-    <h1 class="statement">A private holding company in <em>financial technology</em>.</h1>
-    <div class="hero__foot">
-      <span class="mono">01 — Position</span>
-      <p>We build, own and back companies. We hold them for as long as they are
-        worth holding, and we do not discuss them publicly.</p>
+  <!-- ============================ HERO ============================ -->
+  <section class="hero">
+    <canvas id="aurora" aria-hidden="true"></canvas>
+    <div class="wrap hero__in">
+
+      <div class="hero__meta">
+        <span class="chip">Est. London</span>
+        <span class="chip">Sector — Financial technology</span>
+      </div>
+
+      <h1 class="title">We play a <span>long game</span> in financial technology.</h1>
+
+      <p class="hero__sub">Big Ideas Group builds, owns and backs companies.
+        No fund. No exit clock. No public roster.</p>
+
+      <div class="hero__acts">
+        <a class="btn btn--go" href="#contact">Open a channel</a>
+        <a class="btn btn--ghost" href="#roster">How we play</a>
+      </div>
     </div>
   </section>
 
-  <!-- ============================ HOW ============================ -->
-  <section class="band shell">
-    <span class="mono band__label">02 — How the group works</span>
+  <!-- ============================ ATTRIBUTES ============================ -->
+  <section class="sec wrap">
+    <div class="sec__head">
+      <span class="hud hud--violet">Group profile</span>
+      <h2>Attributes</h2>
+      <span class="sec__rule" aria-hidden="true"></span>
+    </div>
 
-    <ul class="index">
-      <li>
-        <div>
-          <h3>We build from inside</h3>
-          <p>New companies are started with the group’s own capital and the group’s
-            own operators. Nothing is spun up to be sold.</p>
+    <div class="attrs">
+      <div class="attr">
+        <div class="attr__top">
+          <span class="hud">Time horizon</span>
+          <span class="attr__val attr__val--on">Permanent</span>
         </div>
-      </li>
-      <li>
-        <div>
-          <h3>We hold without a clock</h3>
-          <p>There is no fund, no vintage year and no outside timetable. That
-            changes what a business is allowed to optimise for.</p>
-        </div>
-      </li>
-      <li>
-        <div>
-          <h3>We back people we know</h3>
-          <p>Occasionally we take a position in something run by someone we have
-            already worked with. Rarely otherwise.</p>
-        </div>
-      </li>
-    </ul>
-  </section>
+        <div class="meter"><i style="--fill:1"></i></div>
+      </div>
 
-  <!-- ============================ SLAB ============================ -->
-  <section class="slab">
-    <div class="shell">
-      <span class="mono">03 — Terms of engagement</span>
-      <p>Our companies work with a select group of clients.</p>
+      <div class="attr">
+        <div class="attr__top">
+          <span class="hud">Outside capital</span>
+          <span class="attr__val attr__val--off">None</span>
+        </div>
+        <div class="meter meter--off"><i style="--fill:0.04"></i></div>
+      </div>
+
+      <div class="attr">
+        <div class="attr__top">
+          <span class="hud">Operator-led</span>
+          <span class="attr__val attr__val--on">Fully</span>
+        </div>
+        <div class="meter"><i style="--fill:1"></i></div>
+      </div>
+
+      <div class="attr">
+        <div class="attr__top">
+          <span class="hud">Roster disclosed</span>
+          <span class="attr__val attr__val--off">No</span>
+        </div>
+        <div class="meter meter--off"><i style="--fill:0.02"></i></div>
+      </div>
     </div>
   </section>
 
-  <!-- ============================ INTERESTS ============================ -->
-  <section class="band shell">
-    <span class="mono band__label">04 — Where we operate</span>
-    <ul class="plain">
-      <li>Financial technology</li>
-      <li>Payments</li>
-      <li>Digital assets</li>
-      <li>Advertising &amp; media</li>
-      <li>Consumer internet</li>
-    </ul>
+  <!-- ============================ ROSTER ============================ -->
+  <section class="sec wrap" id="roster">
+    <div class="sec__head">
+      <span class="hud hud--violet">Mechanics</span>
+      <h2>How we play</h2>
+      <span class="sec__rule" aria-hidden="true"></span>
+    </div>
+
+    <div class="tiles">
+      <article class="tile">
+        <span class="tile__n">BUILD</span>
+        <h3>Start it inside the group</h3>
+        <p>New companies run on the group’s own capital and the group’s own
+          operators. Nothing is spun up to be sold.</p>
+      </article>
+
+      <article class="tile">
+        <span class="tile__n">HOLD</span>
+        <h3>Keep it past the exit window</h3>
+        <p>No fund, no vintage year, no outside timetable. That changes what a
+          business is allowed to optimise for.</p>
+      </article>
+
+      <article class="tile">
+        <span class="tile__n">BACK</span>
+        <h3>Only for people we know</h3>
+        <p>Occasionally we take a position in something run by someone we have
+          already worked with. Rarely otherwise.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================ LOCKED ROSTER ============================ -->
+  <section class="sec wrap">
+    <div class="sec__head">
+      <span class="hud hud--violet">Portfolio</span>
+      <h2>Not disclosed</h2>
+      <span class="sec__rule" aria-hidden="true"></span>
+    </div>
+
+    <div class="slots">
+      <div class="slot">
+        <div class="slot__bars" aria-hidden="true"><i style="width:80%"></i><i style="width:52%"></i></div>
+        <span class="slot__lock">Locked</span>
+      </div>
+      <div class="slot">
+        <div class="slot__bars" aria-hidden="true"><i style="width:64%"></i><i style="width:74%"></i></div>
+        <span class="slot__lock">Locked</span>
+      </div>
+      <div class="slot">
+        <div class="slot__bars" aria-hidden="true"><i style="width:88%"></i><i style="width:40%"></i></div>
+        <span class="slot__lock">Locked</span>
+      </div>
+      <div class="slot slot--last">
+        <span class="slot__lock">Slot open</span>
+      </div>
+    </div>
+
+    <p class="term__note" style="margin-top:22px">
+      We do not publish what the group owns. If you are already in a conversation
+      with one of our companies, you know which one.
+    </p>
+  </section>
+
+  <!-- ============================ SECTORS ============================ -->
+  <section class="sec wrap">
+    <div class="sec__head">
+      <span class="hud hud--violet">Territory</span>
+      <h2>Where we operate</h2>
+      <span class="sec__rule" aria-hidden="true"></span>
+    </div>
+
+    <div class="sectors">
+      <span class="sector sector--primary">Financial technology</span>
+      <span class="sector">Payments</span>
+      <span class="sector">Digital assets</span>
+      <span class="sector">Advertising &amp; media</span>
+      <span class="sector">Consumer internet</span>
+    </div>
   </section>
 
   <!-- ============================ CONTACT ============================ -->
-  <section class="band shell">
-    <span class="mono band__label">05 — Contact</span>
-    <div class="contact">
-      <div>
-        <h2>We are not looking for inbound.</h2>
-        <p>If you have found us, you probably already know why. Keep it short.</p>
+  <section class="sec wrap" id="contact">
+    <div class="sec__head">
+      <span class="hud hud--violet">Comms</span>
+      <h2>Open a channel</h2>
+      <span class="sec__rule" aria-hidden="true"></span>
+    </div>
+
+    <div class="term">
+      <div class="term__bar">
+        <span class="term__dot" aria-hidden="true"></span>
+        <span class="term__dot" aria-hidden="true"></span>
+        <span class="term__dot" aria-hidden="true"></span>
+        <span class="hud" style="margin-left:8px">bigideas.me — inbound</span>
       </div>
-      <div>
-        <div class="contact__row">
-          <span class="mono" style="color:var(--ink-soft)">Enquiries</span><br>
-          <a class="mailto" href="mailto:hello@bigideas.me">hello@bigideas.me</a>
+
+      <div class="term__body">
+        <div class="term__line">
+          <span class="hud">Enquiries</span>
+          <a class="term__val" href="mailto:hello@bigideas.me">hello@bigideas.me</a>
         </div>
-        <div class="contact__row">
-          <span class="mono" style="color:var(--ink-soft)">Careers</span><br>
-          <a class="mailto" href="mailto:careers@bigideas.me">careers@bigideas.me</a>
-          <p>We hire rarely and directly. Send work, not a CV.</p>
+        <div class="term__line">
+          <span class="hud">Careers</span>
+          <a class="term__val" href="mailto:careers@bigideas.me">careers@bigideas.me</a>
         </div>
+        <p class="term__note">We are not looking for inbound. If you have found us,
+          you probably already know why. Keep it short.</p>
       </div>
     </div>
   </section>
 
 </main>
 
-<footer class="colophon shell">
-  <span class="mono">&copy; <span id="y">2026</span> Big Ideas Group Ltd.</span>
-  <span class="mono">All rights reserved</span>
+<footer class="wrap foot">
+  <span class="hud">&copy; <span id="y">2026</span> Big Ideas Group Ltd.</span>
+  <span class="hud">All rights reserved</span>
 </footer>
 
-<script>document.getElementById("y").textContent = new Date().getFullYear()</script>
+<script src="site.js" defer></script>
 </body>
 </html>
