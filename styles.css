@@ -73,7 +73,7 @@ a{color:inherit;text-decoration:none}
 }
 .mark{display:flex;align-items:center;gap:12px}
 .mark__glyph{
-  width:9px;height:9px;flex:none;
+  width:10px;height:10px;flex:none;
   background:var(--accent);
 }
 .mark__txt{
@@ -95,7 +95,7 @@ a{color:inherit;text-decoration:none}
   .nav{gap:14px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
   .nav::-webkit-scrollbar{display:none}
   .nav a{white-space:nowrap;font-size:.625rem;letter-spacing:.1em}
-  .mark__txt{display:none}
+  .mark__txt{font-size:.875rem}
 }
 
 /* --- hero --------------------------------------------------------------- */
@@ -144,6 +144,15 @@ a{color:inherit;text-decoration:none}
   font-size:clamp(1.4rem,3vw,2.15rem);letter-spacing:-.028em;line-height:1.05;
 }
 .sec__rule{flex:1;min-width:40px;height:1px;background:var(--line);align-self:center}
+
+/* --- categories: what the group operates in, never who ------------------ */
+.cats{
+  display:flex;flex-wrap:wrap;gap:8px 0;
+  font-family:var(--display);font-weight:500;
+  font-size:clamp(1.15rem,2.8vw,2rem);line-height:1.25;letter-spacing:-.028em;
+  margin-bottom:clamp(28px,4vh,44px);
+}
+.cats li:not(:last-child)::after{content:" / ";color:var(--accent);white-space:pre}
 
 /* --- a statement, not a box ---------------------------------------------- */
 .say{
