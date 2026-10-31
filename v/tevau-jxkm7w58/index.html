@@ -13,13 +13,17 @@
 <style>
   :root { --void: #0B0D11; --panel: #13161B; --line: #242932; --accent: #7EA8C4; --text: #E9ECEF; --dim: #98A1AC; }
   * { box-sizing: border-box; margin: 0; }
-  body { background: var(--void); color: var(--text); font: 17px/1.55 "DM Sans", system-ui, sans-serif; }
+  body { background: var(--void); color: var(--text); font: 17px/1.55 "DM Sans", system-ui, "Microsoft YaHei", "PingFang SC", sans-serif; }
   .wrap { max-width: 1000px; margin: 0 auto; padding: 32px max(16px, env(safe-area-inset-left)) 56px; }
   .eyebrow { color: var(--accent); font-weight: 500; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; }
-  h1 { font: 600 clamp(28px, 4.5vw, 40px)/1.15 "Archivo", system-ui, sans-serif; letter-spacing: -.01em; margin-top: 8px; }
+  h1 { font: 600 clamp(28px, 4.5vw, 40px)/1.15 "Archivo", system-ui, "Microsoft YaHei", sans-serif; letter-spacing: -.01em; margin-top: 8px; }
   .lead { color: var(--dim); margin-top: 10px; max-width: 640px; }
+  .langs { display: inline-flex; gap: 4px; margin-top: 20px; padding: 4px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; }
+  .langs button { min-height: 44px; padding: 0 18px; border: 0; border-radius: 8px; background: none; color: var(--dim);
+    font: inherit; font-weight: 500; cursor: pointer; }
+  .langs button[aria-pressed="true"] { background: var(--text); color: var(--void); }
   section { margin-top: 40px; }
-  h2 { font: 600 22px/1.3 "Archivo", system-ui, sans-serif; }
+  h2 { font: 600 22px/1.3 "Archivo", system-ui, "Microsoft YaHei", sans-serif; }
   .who { color: var(--dim); margin-top: 4px; }
   video { display: block; width: 100%; height: auto; margin-top: 14px; border-radius: 12px; border: 1px solid var(--line); background: #000; }
   .note { color: var(--dim); font-size: 14px; margin-top: 44px; border-top: 1px solid var(--line); padding-top: 18px; }
@@ -27,23 +31,40 @@
 </head>
 <body>
 <div class="wrap">
-  <div class="eyebrow">Prepared for Tevau</div>
-  <h1>Two short demos</h1>
-  <p class="lead">English voice with Simplified Chinese subtitles. Both use example data.</p>
+  <div class="eyebrow" data-zh="为 Tevau 准备">Prepared for Tevau</div>
+  <h1 data-zh="两个简短演示">Two short demos</h1>
+  <p class="lead" data-zh="普通话配音，英文字幕。均使用示例数据。">English voice with Simplified Chinese subtitles. Both use example data.</p>
+  <div class="langs" role="group" aria-label="Language">
+    <button type="button" data-lang="en" aria-pressed="true">English</button>
+    <button type="button" data-lang="zh" aria-pressed="false" lang="zh-Hans">中文</button>
+  </div>
 
   <section id="bd-brain">
     <h2>BD Brain</h2>
-    <p class="who">For the Tevau BD team, internal. Works alongside the agents you already use. Reads partner groups, never posts.</p>
-    <video controls playsinline preload="metadata" poster="bd-brain.jpg"><source src="bd-brain.mp4?v=4" type="video/mp4"></video>
+    <p class="who" data-zh="Tevau 商务和技术团队内部使用。与您现有的 AI 助手配合，读取合作伙伴群聊，从不发言。">For the Tevau BD and tech teams, internal. Works alongside the agents you already use. Reads partner groups, never posts.</p>
+    <video controls playsinline preload="metadata" poster="bd-brain.jpg" src="bd-brain.mp4?v=6" data-en="bd-brain.mp4?v=6" data-zh-src="bd-brain-zh.mp4?v=2"></video>
   </section>
 
   <section id="partner-desk">
     <h2>Partner Desk</h2>
-    <p class="who">What your partners see: a Launch tab in the Tevau dashboard they already use.</p>
-    <video controls playsinline preload="metadata" poster="partner-desk.jpg"><source src="partner-desk.mp4?v=4" type="video/mp4"></video>
+    <p class="who" data-zh="合作伙伴看到的内容：在他们已经使用的 Tevau 后台中新增一个“上线”标签页。">What your partners see: a Launch tab in the Tevau dashboard they already use.</p>
+    <video controls playsinline preload="metadata" poster="partner-desk.jpg" src="partner-desk.mp4?v=4" data-en="partner-desk.mp4?v=4" data-zh-src="partner-desk-zh.mp4?v=2"></video>
   </section>
 
-  <p class="note">Private link, please do not share outside Tevau.</p>
+  <p class="note" data-zh="私人链接，请勿在 Tevau 以外分享。">Private link, please do not share outside Tevau.</p>
 </div>
+<script>
+(() => {
+  // One switch for the whole page: the films and the words around them.
+  const texts = [...document.querySelectorAll('[data-zh]')].map((el) => ({ el, en: el.textContent, zh: el.dataset.zh }));
+  const set = (lang) => {
+    document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : 'en';
+    texts.forEach((t) => { t.el.textContent = t[lang]; });
+    document.querySelectorAll('video').forEach((v) => { v.src = lang === 'zh' ? v.dataset.zhSrc : v.dataset.en; });
+    document.querySelectorAll('.langs button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+  };
+  document.querySelectorAll('.langs button').forEach((b) => b.addEventListener('click', () => set(b.dataset.lang)));
+})();
+</script>
 </body>
 </html>
